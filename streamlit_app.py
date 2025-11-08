@@ -15,7 +15,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for colorful theme with animations
+# Custom CSS for colorful theme with enhanced animations
 st.markdown("""
 <style>
     @keyframes fadeIn {
@@ -27,6 +27,23 @@ st.markdown("""
         50% { transform: scale(1.05); }
         100% { transform: scale(1); }
     }
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-10px); }
+        60% { transform: translateY(-5px); }
+    }
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    @keyframes slideInLeft {
+        from { transform: translateX(-100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideInRight {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
     .main {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: #ffffff;
@@ -36,7 +53,7 @@ st.markdown("""
         background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         border-radius: 15px;
         margin: 10px;
-        animation: fadeIn 1.5s ease-in;
+        animation: slideInLeft 1.5s ease-in;
     }
     .stButton>button {
         background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
@@ -52,6 +69,7 @@ st.markdown("""
         background: linear-gradient(45deg, #4ecdc4, #ff6b6b);
         transform: translateY(-2px);
         box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        animation: bounce 0.6s ease;
     }
     .card {
         background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
@@ -60,7 +78,7 @@ st.markdown("""
         margin: 15px 0;
         border: 2px solid #ff9a9e;
         color: #333;
-        animation: fadeIn 2s ease-in;
+        animation: slideInRight 2s ease-in;
         box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
     h1, h2, h3 {
@@ -73,6 +91,16 @@ st.markdown("""
     }
     .stDataframe, .stPlotlyChart {
         animation: fadeIn 2.5s ease-in;
+    }
+    .floating-icon {
+        animation: rotate 3s linear infinite;
+        display: inline-block;
+        margin: 0 10px;
+    }
+    .welcome-image {
+        animation: fadeIn 2s ease-in;
+        border-radius: 15px;
+        margin: 20px 0;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -108,6 +136,15 @@ df = load_data()
 
 # Title and description
 st.title("🔍 FriendLens")
+
+# Add animated welcome image
+st.markdown("""
+<div style="text-align: center; margin: 20px 0;">
+    <img src="https://img.freepik.com/free-vector/friends-gathering-concept-illustration_114360-2664.jpg?w=826&t=st=1698765432~exp=1698766032~hmac=1234567890abcdef" 
+         alt="Friends connecting" class="welcome-image" style="max-width: 100%; height: 300px; object-fit: cover;">
+</div>
+""", unsafe_allow_html=True)
+
 st.markdown("""
 <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 20px; border-radius: 15px; margin: 20px 0; border: 2px solid #ff9a9e; color: #333; animation: fadeIn 1.5s ease-in;">
     <h2 style="color: #ff6b6b; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); margin-bottom: 10px;">🌟 Welcome to FriendLens! 🌟</h2>
@@ -118,11 +155,11 @@ st.markdown("""
     </p>
     <p style="font-size: 16px; margin-top: 15px;">
         🎯 <strong>Key Features:</strong><br>
-        • Personalized profile analysis and recommendations<br>
-        • Interactive visualizations and data insights<br>
-        • Hobby and club matching based on your interests<br>
-        • Downloadable reports for your personality profile<br>
-        • Beautiful, animated interface with colorful gradients
+        • <span class="floating-icon">🔍</span> Personalized profile analysis and recommendations<br>
+        • <span class="floating-icon">📊</span> Interactive visualizations and data insights<br>
+        • <span class="floating-icon">🤝</span> Hobby and club matching based on your interests<br>
+        • <span class="floating-icon">📄</span> Downloadable reports for your personality profile<br>
+        • <span class="floating-icon">🎨</span> Beautiful, animated interface with colorful gradients
     </p>
     <p style="font-size: 16px; margin-top: 15px; color: #ff6b6b; font-weight: bold;">
         🚀 Get started by filling out your profile in the sidebar and clicking "Analyze My Profile"!
