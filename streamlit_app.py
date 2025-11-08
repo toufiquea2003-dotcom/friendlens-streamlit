@@ -15,35 +15,64 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for dark theme
+# Custom CSS for colorful theme with animations
 st.markdown("""
 <style>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
     .main {
-        background-color: #0e1117;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: #ffffff;
+        animation: fadeIn 1s ease-in;
     }
     .sidebar .sidebar-content {
-        background-color: #1a1c23;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        border-radius: 15px;
+        margin: 10px;
+        animation: fadeIn 1.5s ease-in;
     }
     .stButton>button {
-        background-color: #4f46e5;
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
         color: white;
-        border-radius: 5px;
+        border-radius: 25px;
         border: none;
-        padding: 10px 20px;
+        padding: 12px 24px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        animation: pulse 2s infinite;
     }
     .stButton>button:hover {
-        background-color: #3730a3;
+        background: linear-gradient(45deg, #4ecdc4, #ff6b6b);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
     .card {
-        background-color: #1a1c23;
+        background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
         padding: 20px;
-        border-radius: 10px;
-        margin: 10px 0;
-        border: 1px solid #4f46e5;
+        border-radius: 15px;
+        margin: 15px 0;
+        border: 2px solid #ff9a9e;
+        color: #333;
+        animation: fadeIn 2s ease-in;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
     h1, h2, h3 {
-        color: #4f46e5;
+        color: #ff6b6b;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        animation: fadeIn 1s ease-in;
+    }
+    .stSlider, .stSelectbox, .stTextInput {
+        animation: fadeIn 1.5s ease-in;
+    }
+    .stDataframe, .stPlotlyChart {
+        animation: fadeIn 2.5s ease-in;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -79,7 +108,27 @@ df = load_data()
 
 # Title and description
 st.title("🔍 FriendLens")
-st.markdown("**Discover connections, insights, and personalized recommendations from your data.**")
+st.markdown("""
+<div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 20px; border-radius: 15px; margin: 20px 0; border: 2px solid #ff9a9e; color: #333; animation: fadeIn 1.5s ease-in;">
+    <h2 style="color: #ff6b6b; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); margin-bottom: 10px;">🌟 Welcome to FriendLens! 🌟</h2>
+    <p style="font-size: 18px; line-height: 1.6;">
+        <strong>FriendLens</strong> is your ultimate companion for discovering meaningful connections and insights from lifestyle data.
+        Whether you're looking to find like-minded friends, understand your personality traits, or explore new hobbies,
+        our AI-powered platform analyzes your preferences and matches you with similar profiles from our extensive dataset.
+    </p>
+    <p style="font-size: 16px; margin-top: 15px;">
+        🎯 <strong>Key Features:</strong><br>
+        • Personalized profile analysis and recommendations<br>
+        • Interactive visualizations and data insights<br>
+        • Hobby and club matching based on your interests<br>
+        • Downloadable reports for your personality profile<br>
+        • Beautiful, animated interface with colorful gradients
+    </p>
+    <p style="font-size: 16px; margin-top: 15px; color: #ff6b6b; font-weight: bold;">
+        🚀 Get started by filling out your profile in the sidebar and clicking "Analyze My Profile"!
+    </p>
+</div>
+""", unsafe_allow_html=True)
 
 # Sidebar
 st.sidebar.header("🎯 Your Profile")
