@@ -1,0 +1,11 @@
+user_id,age,height,weight,spice_tolerance,favorite_cuisines,movie_genres,series_genres,gaming_platforms,social_media_hours,music_genres,reading_genres,shopping_preferences,travel_destinations,hobbies,clubs
+1,20,170,65,3,"Italian,Chinese","Action,Comedy","Drama,Thriller","PC,PlayStation",5,"Pop,Rock","Fiction,Mystery","Online,Clothing","Europe,Asia","Reading,Gaming","BookClub,GamingClub"
+2,21,165,60,4,"Mexican,Indian","Horror,Romance","Comedy,SciFi","PC,Mobile",4,"HipHop,Jazz","NonFiction,Biography","Books,Electronics","Asia,America","Traveling,Cooking","TravelClub,CookingClub"
+3,19,175,70,2,"Korean,Japanese","Comedy,Drama","Action,Romance","PlayStation,Xbox",6,"Rock,Indie","Fiction,Fantasy","Clothing,Shoes","Europe,Australia","Gaming,Sports","GamingClub,SportsClub"
+4,22,168,62,5,"Thai,Vietnamese","Thriller,SciFi","Drama,Mystery","PC,Switch",3,"Pop,Electronic","Mystery,Thriller","Online,Beauty","America,Asia","Reading,Traveling","BookClub,TravelClub"
+5,20,172,68,3,"Italian,French","Romance,Comedy","Comedy,Drama","Mobile,PC",7,"Jazz,Classical","Biography,History","Electronics,Gadgets","Europe,Africa","Cooking,Gaming","CookingClub,GamingClub"
+6,21,160,55,4,"Indian,Chinese","Action,Horror","SciFi,Thriller","PlayStation,PC",5,"HipHop,Rock","Fantasy,SciFi","Clothing,Accessories","Asia,Europe","Sports,Reading","SportsClub,BookClub"
+7,19,178,75,2,"Mexican,Korean","Drama,Romance","Romance,Comedy","Xbox,Switch",4,"Indie,Pop","Fiction,Romance","Books,Music","Australia,America","Traveling,Sports","TravelClub,SportsClub"
+8,22,166,58,5,"Japanese,Thai","SciFi,Thriller","Mystery,Action","PC,Mobile",6,"Electronic,Jazz","NonFiction,Mystery","Beauty,Health","Europe,Asia","Cooking,Reading","CookingClub,BookClub"
+9,20,174,72,3,"French,Italian","Comedy,Horror","Drama,SciFi","PlayStation,Xbox",3,"Rock,Classical","History,Biography","Gadgets,Electronics","America,Australia","Gaming,Traveling","GamingClub,TravelClub"
+10,21,162,56,4,"Vietnamese,Indian","Romance,Action","Comedy,Thriller","Switch,Mobile",5,"Pop,HipHop","Fantasy,Romance","Online,Clothing","Asia,Europe","Sports,Cooking","SportsClub,CookingClub"

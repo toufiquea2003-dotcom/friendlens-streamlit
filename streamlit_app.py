@@ -1,3 +1,6 @@
+import sys
+sys.path.insert(0, 'C:\\Users\\toufi\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages')
+
 import streamlit as st
 import pandas as pd
 import numpy as np
